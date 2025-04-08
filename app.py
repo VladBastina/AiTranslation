@@ -65,6 +65,18 @@ LANGUAGES = ["russian", "romanian", "english", "german", "french", "spanish"]
 
 # --- Core Functions (Adapted from your script) ---
 
+def load_css(file_name):
+    """Loads a CSS file and injects it into the Streamlit app."""
+    try:
+        css_path = Path(__file__).parent / file_name
+        with open(css_path) as f:
+            st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
+        # st.info(f"Loaded CSS: {file_name}") # Optional: uncomment for debugging
+    except FileNotFoundError:
+        st.error(f"CSS file not found: {file_name}. Make sure it's in the same directory as app.py.")
+    except Exception as e:
+        st.error(f"Error loading CSS file {file_name}: {e}")
+
 # Global variable to hold the configured model
 gemini_model = None
 
@@ -338,6 +350,8 @@ def create_txt_from_text(translated_text):
         st.error(f"Error creating output TXT: {e}")
         return None
 
+
+load_css("style.css")
 
 # --- Streamlit App UI ---
 st.title("📄 Document Translator")
