@@ -1,0 +1,5 @@
+*.pdf
+!default_pharma.pdf
+*.py
+!app.py
+.streamlit/secrets.toml
