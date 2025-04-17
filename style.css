@@ -1,57 +1,72 @@
-/* Target the main block container of the Streamlit app */
-.stApp {
-    background-color: #f0f2f6; /* Light grey background */
+body {
+	font-family: 'Inter Tight', Arial, Helvetica, sans-serif !important;
+	font-size: 14px !important;
+	text-align: left !important;
 }
 
-/* Style the sidebar */
-[data-testid="stSidebar"] {
-    background-color: #e8eaf6; /* Lighter purple/blue */
-    border-right: 2px solid #1a237e; /* Dark blue border */
+/* Headings */
+h1, h2, h3 {
+	font-family: "Space Grotesk", sans-serif !important;
+  font-optical-sizing: auto !important;
+	font-weight: 500 !important;
+  font-style: normal !important;
 }
-
-/* Style buttons in the sidebar */
-[data-testid="stSidebar"] .stButton>button {
-    background-color: #3f51b5; /* Indigo */
-    color: white;
-    border-radius: 8px;
-    border: none;
+h1, h2 {
+	letter-spacing: -2px !important;
 }
-
-[data-testid="stSidebar"] .stButton>button:hover {
-    background-color: #1a237e; /* Darker Indigo on hover */
-    color: white;
-}
-
- /* Style the main title */
 h1 {
-    color: #2c3e50; /* Dark grey/blue */
-    text-align: center;
-    font-family: 'Arial', sans-serif; /* Example font */
+	font-size: 34px !important;
+}
+h2 {
+	font-size: 21px !important;
+}
+h3 {
+	font-size: 17px !important;
+}
+h4 {
+	font-size: 14px !important;
 }
 
-/* Style subheaders */
-h2, h3 {
-    color: #3f51b5; /* Indigo */
+/* Butoane */
+
+button {
+	font-weight: 600 !important;
+}
+button:hover {
+	color: #FA6C03 !important;
+	border-color: #FA6C03 !important;
+}
+button:focus {
+	color: #fff !important;
+	background-color: #FA6C03 !important;
 }
 
-/* Style download buttons specifically */
-.stDownloadButton>button {
-    background-color: #4CAF50; /* Green */
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    border: none;
-}
-.stDownloadButton>button:hover {
-    background-color: #388E3C; /* Darker Green */
+/* Buton sidebar */
+[data-testid="stSidebar"] .stButton>button {
+	background-color: #4169E1 !important;
 }
 
-/* Style info boxes */
-.stAlert.st-alert.stInfo {
-     border-left-color: #3f51b5 !important; /* Use !important carefully if needed */
-     background-color: #e8eaf6;
-     color: #1a237e;
+/* Bara loading */
+.st-emotion-cache-1dp5vir {
+	background-image: linear-gradient(90deg, rgb(65, 105, 225), rgb(0, 255, 255)) !important;
 }
 
-/* You might need to inspect elements in your browser's developer tools
-   to find the correct selectors for specific Streamlit elements. */
+/* Bara stanga */
+.st-emotion-cache-vmpjyt {
+	background-color: #f5f5f5 !important;
+}
+
+/* Select */
+.st-ae {
+	font-family: inherit !important;
+}
+
+/* File Select */
+.st-emotion-cache-1gulkj5 {
+	background-color: #f5f5f5 !important;
+}
+
+/* Other fonts */
+p {
+	font-family: 'Inter Tight', Arial, Helvetica, sans-serif !important;
+}

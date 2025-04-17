@@ -351,6 +351,11 @@ def create_txt_from_text(translated_text):
         return None
 
 
+st.markdown("""
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+""", unsafe_allow_html=True)
 load_css("style.css")
 
 # --- Streamlit App UI ---
@@ -358,7 +363,14 @@ st.title("📄 Document Translator")
 
 configure_gemini(None)
 
-st.sidebar.image('zega_logo.PNG',use_container_width=True)
+logo_path = "zega_logo.svg"
+if os.path.exists(logo_path):
+    with open(logo_path, "r", encoding="utf-8") as f:
+        svg_content = f.read()
+        
+    st.sidebar.markdown(svg_content,unsafe_allow_html=True)
+else:
+    st.sidebar.warning("Logo zega_logo.PNG not found.")
 
 st.sidebar.markdown("---") # Separator
 
